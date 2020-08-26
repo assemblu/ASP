@@ -9,4 +9,5 @@ t = np.arange(-.002, .002, 1/fs)
 x = A * np.cos(2*np.pi*f0*t+phi)
 
 plt.plot(t, x)
+plt.grid()
 plt.show()
