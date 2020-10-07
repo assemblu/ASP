@@ -1,3 +1,5 @@
+# Author: Emirhan Gocturk
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -39,13 +41,10 @@ if debug:
     print("[y]: ", y)
 
 # convolve
-# todo: after lunch break or some other time!
-
-
-#foreach x
-for i in range(len(x)-1):
-    #foreach h
-    for j in range(len(h)-1):
+# foreach x
+for i in range(len(x)):
+    # foreach h
+    for j in range(len(h)):
         y[i+j] = y[i+j] + (x[i]*h[j])
 
 #title
