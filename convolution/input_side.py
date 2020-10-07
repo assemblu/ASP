@@ -1,21 +1,23 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-debug = True
+debug = False
 # lower case means discrete signal
 # upper case means continuous signal
 
 # 81 samples of input signal
 if debug:
     print("Generating signal x")
-x = np.arange(0, 0.81, 0.1)
+x = np.arange(0, 0+8.1, 0.1)
+print("x length: ", len(x))
 if debug:
     print("Generated discrete 81 sample input signal 'x'")
 
 # 31 samples of impulse repsonse
 if debug:
     print("Generating signal h")
-h = np.arange(1, 1.31, 0.1)
+h = np.arange(1, 1+3.1, 0.1)
+print("y length: ", len(h))
 if debug:
     print("Generated discrete 31 sample impulse response signal 'h'")
 
@@ -36,10 +38,28 @@ if debug:
     print("[y]: zero the signal complete")
     print("[y]: ", y)
 
-#convolve
+# convolve
 # todo: after lunch break or some other time!
-for i in x:
-    for j in h:
+
+
+#foreach x
+for i in range(len(x)-1):
+    #foreach h
+    for j in range(len(h)-1):
         y[i+j] = y[i+j] + (x[i]*h[j])
-    
-print(y)
+
+#title
+plt.title("Convolution: Input Side Algorithm")
+# x axis text
+plt.xlabel("Sample Number")
+# y axis text
+plt.ylabel("Amplitude")
+
+#plotting
+plt.plot(x, 'r', label="Input")
+plt.plot(h, 'g', label="Impulse")
+plt.plot(y, 'b', label="Output")
+
+plt.legend(loc="upper left")
+plt.grid()
+plt.show()
