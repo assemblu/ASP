@@ -19,8 +19,8 @@ print("h = ", h)
 # output signal, all zeros
 y = np.zeros(len(x) + len(h) - 1)
 
+# refer to the manual solution and observe the similarities
 for i in range(len(x)):
-    print(i)
     for j in range(len(h)):
         y[i+j] = y[i+j] + (x[i]*h[j])
 
