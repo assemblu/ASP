@@ -1,5 +1,5 @@
 # Author: Emirhan Gocturk
-# Description: Triangular wave lookup table data dumper
+# Description: Reverse sawtooth wave lookup table data dumper
 # it is a bit weird..
 
 from scipy import signal

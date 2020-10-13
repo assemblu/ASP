@@ -1,5 +1,5 @@
 # Author: Emirhan Gocturk
-# Description: Triangular wave lookup table data dumper
+# Description: Sawtooth wave lookup table data dumper
 
 from scipy import signal
 import matplotlib.pyplot as plt
