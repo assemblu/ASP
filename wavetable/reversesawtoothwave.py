@@ -6,7 +6,7 @@ from scipy import signal
 import matplotlib.pyplot as plt
 import numpy as np
 
-t = np.arange(0, 6.3, 0.01)
+t = np.arange(0, 6.4, 0.1)
 y = signal.sawtooth(t, 0.1)
 plt.plot(t, y)  
 plt.grid()
