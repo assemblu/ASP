@@ -15,7 +15,4 @@ plt.title("Guitar Passage Sample")
 plt.grid()
 plt.show()
 
-# guitar arp
-# todo.. fs*=2 or fs/=5
-
 sd.play(y, fs)
