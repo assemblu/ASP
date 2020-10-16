@@ -15,3 +15,4 @@ plt.title("Pulse Wave Sample")
 plt.show()
 
 print("DATA DUMP= ", y)
+np.savetxt("wavetable\\datadumps\\pulsewave.txt", y, delimiter=',')
