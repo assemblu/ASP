@@ -17,7 +17,7 @@ plt.title("Sawtooth Wave Sample")
 plt.show()
 
 print("DATA DUMP= ", y)
-#np.savetxt("wavetable\\datadumps\\sawtooth.txt", y, delimiter=',')
+np.savetxt("wavetable\\datadumps\\sawtooth.txt", y, delimiter=',')
 
 fs = 44100
 sd.play(y, fs)
