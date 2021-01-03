@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # debugging the script
-printing = false
+printing = False
 
 # signal length (samples)
 N = 128
