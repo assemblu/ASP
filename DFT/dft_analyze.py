@@ -11,7 +11,6 @@ import numpy as np
 # let's use print!
 debug = True
 
-
 # generate a sine in time domain
 t = np.arange(0, 100, 0.1)
 y = np.sin(t)
