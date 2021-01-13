@@ -8,7 +8,7 @@ import numpy as np
 
 import sounddevice as sd
 
-t = np.arange(0, 6.4, 0.1)
+t = np.arange(0, np.pi*2, 0.00156)
 y = signal.sawtooth(t, 0.1)
 plt.plot(t, y)  
 plt.grid()
