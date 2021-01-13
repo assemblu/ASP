@@ -8,7 +8,7 @@ import numpy as np
 import sounddevice as sd
 
 t = np.arange(0, np.pi*2, 0.00156)
-y = signal.sawtooth(t)
+y = 4000/2+signal.sawtooth(t)*4000/2
 plt.plot(t, y)  
 plt.grid()
 plt.xlabel("Time [s]")
@@ -17,7 +17,13 @@ plt.title("Sawtooth Wave Sample")
 plt.show()
 
 print("DATA DUMP= ", y)
-np.savetxt("wavetable\\datadumps\\sawtooth.txt", y, delimiter=',')
+
+f = open("sawtoothwave.txt", "w+")
+count = 0
+while count < len(y):
+    f.write(str(int(y[count])))
+    f.write(", ")
+    count += 1
 
 fs = 44100
 sd.play(y, fs)

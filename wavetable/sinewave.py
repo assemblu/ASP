@@ -22,7 +22,6 @@ plt.title("Sine Wave Sample")
 plt.show()
 
 print("DATA DUMP= ", y)
-#np.savetxt("wavetable\\datadumps\\sinewave.txt", y, delimiter=',')
 
 f = open("sinewave.txt", "w+")
 count = 0
