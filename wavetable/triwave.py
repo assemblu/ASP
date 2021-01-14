@@ -22,7 +22,7 @@ plt.show()
 
 print("DATA DUMP= ", y)
 
-f = open("triwave.txt" "w+")
+f = open("triwave.txt", "w+")
 count = 0
 while count < len(y):
     f.write(str(int(y[count])))
