@@ -29,3 +29,4 @@ while count < len(y):
     f.write(", ")
     count += 1
 
+print(str(len(y)))
