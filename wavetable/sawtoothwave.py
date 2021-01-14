@@ -16,8 +16,6 @@ plt.ylabel("Amplitude [V]")
 plt.title("Sawtooth Wave Sample")
 plt.show()
 
-print("DATA DUMP= ", y)
-
 f = open("sawtoothwave.txt", "w+")
 count = 0
 while count < len(y):
@@ -25,5 +23,5 @@ while count < len(y):
     f.write(", ")
     count += 1
 
-fs = 44100
-sd.play(y, fs)
+
+print(str(len(y)))
