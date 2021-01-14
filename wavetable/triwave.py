@@ -19,3 +19,5 @@ plt.xlabel("Time [s]")
 plt.ylabel("Amplitude [V]")
 plt.title("Tri Wave Sample")
 plt.show()
+
+print("DATA DUMP= ", y)
