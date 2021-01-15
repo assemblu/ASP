@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 t = np.arange(0, np.pi*2, 0.001534)
-y = signal.square(t, 0.5)
+y = 4000/2+signal.square(t, 0.5)*4000/2
 
 index = 0
 while index < len(y):
