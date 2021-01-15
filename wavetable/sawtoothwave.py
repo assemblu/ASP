@@ -7,7 +7,7 @@ import numpy as np
 
 import sounddevice as sd
 
-t = np.arange(0, np.pi*2, 0.00156)
+t = np.arange(0, np.pi*2, 0.001534)
 y = 4000/2+signal.sawtooth(t)*4000/2
 plt.plot(t, y)  
 plt.grid()
