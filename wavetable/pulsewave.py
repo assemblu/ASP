@@ -5,7 +5,7 @@ from scipy import signal
 import matplotlib.pyplot as plt
 import numpy as np
 
-t = np.arange(0, np.pi*2, 0.00156)
+t = np.arange(0, np.pi*2, 0.001534)
 y = signal.square(t, 0.5)
 plt.plot(t, y)  
 plt.grid()
