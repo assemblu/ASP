@@ -21,4 +21,12 @@ plt.title("Pulse Wave Sample")
 plt.show()
 
 print("DATA DUMP= ", y)
-np.savetxt("wavetable\\datadumps\\pulsewave.txt", y, delimiter=',')
+
+f = open("triwave.txt", "w+")
+count = 0
+while count < len(y):
+    f.write(str(int(y[count])))
+    f.write(", ")
+    count += 1
+
+print(str(len(y)))
