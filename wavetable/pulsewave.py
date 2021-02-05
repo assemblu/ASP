@@ -30,3 +30,12 @@ while count < len(y):
     count += 1
 
 print(str(len(y)))
+
+
+resultRealFFT = np.fft.fft(y)
+plt.plot(resultRealFFT.real, resultRealFFT.imag)
+plt.grid()
+plt.xlabel("Frequency")
+plt.ylabel("Amplitude")
+plt.title("Real FFT")
+plt.show()
