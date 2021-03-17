@@ -9,7 +9,7 @@ import numpy as np
 import sounddevice as sd
 
 t = np.arange(0, np.pi*2, 0.001534)
-y = 4000/2+signal.sawtooth(t, 0.1)*4000/2
+y = signal.sawtooth(t, 0.1)*65536/2
 
 index = 0
 while index < len(y):
