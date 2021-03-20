@@ -1,31 +1,32 @@
 # Author: Emirhan Gocturk
-# Description: Running mean smooth filter algorithm 
+# Description: Running mean filter
 
-import matplotlib.pyplot as plt
 import numpy as np
-import scipy.signal as signal
+import matplotlib.pyplot as plt
+import scipy.io as sio
+import scipy.signal
+from scipy import *
+import copy
 
-# Pure signal
-x = np.arange(0, 10, 0.1)
-y = np.sin(x)
+# signal creation
+srate = 1000 #Hz
+time = np.arange(0, 3, 1/srate)
+n = len(time)
+p = 15 #num of poles
 
-# Noise at time length
-noise = np.random.normal(0, 1, len(x))
+noiseamp = 5
 
-y = y + noise
+ampl = np.interp(np.linspace(0, p, n), np.arange(0, p), np.random.rand(p)*30)
+noise = noiseamp * np.random.randn(n)
+signal = ampl + noise
 
-# Window
-plt.plot(x, y)
-plt.grid()
-plt.xlabel("Time")
-plt.ylabel("Amplitude")
-# plt.show()
+# init filtered signal
+filteredSignal = np.zeros(n)
+
+# running mean
+k = 20
 
 
-# Smoothing section
-# Filtered output zeroed at input length
-filtered = np.zeros(len(y))
-
-# running mean filter algorithm
-k = 20 # window = k*2+1
-for i=k+1
+plt.plot(time, signal, label="o")
+plt.plot(time, filteredSignal, label="f")
+plt.show()
