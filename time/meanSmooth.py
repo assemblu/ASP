@@ -25,7 +25,8 @@ filteredSignal = np.zeros(n)
 
 # running mean
 k = 20
-
+for i in range(k, n-k-1):
+    filteredSignal[i] = np.mean(signal[i-k:i+k])
 
 plt.plot(time, signal, label="o")
 plt.plot(time, filteredSignal, label="f")
