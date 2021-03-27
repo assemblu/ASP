@@ -1,6 +1,6 @@
 # Author: Emirhan Gocturk
 # Date: 27 March 2021
-# Description: Guassian mean algorithm
+# Description: Gaussian mean algorithm
 
 import numpy as np
 import matplotlib.pyplot as plt
