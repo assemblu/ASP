@@ -21,3 +21,12 @@ signal = np.zeros(len(time))
 # populate
 for i in range(len(frex)):
     signal = signal + i*np.sin(2*np.pi*frex[i]*time)
+
+# add noise
+signal = signal + np.random.randn(len(signal))
+
+signalF = np.fft.fft(signal)
+signalA = 2*np.abs(signalF)/npnts
+
+plt.plot(signalF, signalA)
+plt.show()
