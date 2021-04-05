@@ -17,3 +17,7 @@ frex = [12, 18, 30]
 
 # signal dummy
 signal = np.zeros(len(time))
+
+# populate
+for i in range(len(frex)):
+    signal = signal + i*np.sin(2*np.pi*frex[i]*time)
