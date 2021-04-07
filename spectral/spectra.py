@@ -9,8 +9,8 @@ from scipy import *
 import copy
 
 srate = 1234 #Hz
-npnts = srate * 2
-time = np.arange(0, npnts)/srate
+npnts = srate * 2 # 2 seconds of data
+time = np.arange(0, npnts-1)/srate
 
 # frequencies to be included
 frex = [12, 18, 30]
@@ -28,5 +28,11 @@ signal = signal + np.random.randn(len(signal))
 signalF = np.fft.fft(signal)
 signalA = 2*np.abs(signalF)/npnts
 
-plt.plot(signalF, signalA)
+hz = np.linspace(0, srate/2, int(npnts/2)+1)
+hzA = np.zeros(len(hz))
+
+for i in range(len(hzA)):
+    hzA[i] = signalA[i]
+
+plt.plot(hz, hzA)
 plt.show()
