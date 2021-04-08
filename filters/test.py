@@ -4,7 +4,7 @@ from math import pi
 import numpy as np
 
 f_s = 1234    # Sample frequency in Hz
-f_c = 200     # Cut-off frequency in Hz
+f_c = 500     # Cut-off frequency in Hz
 order = 4    # Order of the butterworth filter
 
 omega_c = 2 * pi * f_c       # Cut-off angular frequency

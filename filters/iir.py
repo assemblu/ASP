@@ -1,21 +1,43 @@
-from scipy import signal
-import matplotlib.pyplot as plt
+# Author: Emirhan Gocturk
+# Description: Butterworth IIR filter
+
 import numpy as np
+import matplotlib.pyplot as plt
+from scipy import signal
+from scipy import fftpack
+import scipy
+import copy
 
-# Butter worth filter creation
-b, a = signal.butter(8, 0.125)
 
-# Sample count
-n = 60
+# filter parameters
+srate   = 1024 # hz
+nyquist = srate/2
+frange  = [20,45]
 
-# Noise signla
-sig = np.random.randn(n)**3 + 3*np.random.randn(n).cumsum()
+# create filter coefficients
+fkernB,fkernA = signal.butter(4,np.array(frange)/nyquist,btype='bandpass')
 
-# Back and forth filtering
-fpad = signal.filtfilt(b, a, sig, padlen=50)
+# generate an impulse signal
+impres = np.zeros(1001)
+impres[501] = 1
 
-# Visualize
-plt.plot(sig, 'k-', label='input')
-plt.plot(fpad, 'c-', linewidth=1.5, label='pad')
-plt.legend(loc='best')
+# apply filtering
+fimp = signal.lfilter(fkernB, fkernA, impres, axis=-1)
+
+
+# power spectrum
+fimpX = np.abs(fftpack.fft(fimp))**2
+hz = np.linspace(0, nyquist, int(np.floor(len(impres)/2)+1))
+
+
+# plot
+plt.plot(impres, 'k', label="impulse")
+plt.plot(fimp, 'r', label="Filtered")
+plt.xlim([1, len(impres)])
+plt.ylim([-0.06, 0.06])
+plt.legend()
 plt.show()
+
+plt.plot(hz, fimpX[0:len(hz)], 'ks-')
+plt.xlim([0, 100])
+plt.show
