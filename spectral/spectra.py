@@ -41,6 +41,7 @@ hzA = np.zeros(len(hz))
 for i in range(len(hzA)):
     hzA[i] = signalA[i]
 
+# display FFT
 plt.plot(hz, hzA)
 plt.title("Fourier Transform")
 plt.show()
