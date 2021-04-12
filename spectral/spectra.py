@@ -26,9 +26,10 @@ signal = signal + np.random.randn(len(signal))
 
 # take FFT
 signalF = np.fft.fft(signal)
-# extract amplitude
+# extract amplitude of FFT
 signalA = np.abs(signalF)
 
+# 0Hz to nyquist (half of sampling rate)
 hz = np.linspace(0, srate/2, int(npnts/2)+1)
 hzA = np.zeros(len(hz))
 
