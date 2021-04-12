@@ -24,6 +24,11 @@ for i in range(len(frex)):
 # add noise
 signal = signal + np.random.randn(len(signal))
 
+# show signal
+plt.plot(time, signal)
+plt.title("Original Signal")
+plt.show()
+
 # take FFT
 signalF = np.fft.fft(signal)
 # extract amplitude of FFT
@@ -37,4 +42,10 @@ for i in range(len(hzA)):
     hzA[i] = signalA[i]
 
 plt.plot(hz, hzA)
+plt.title("Fourier Transform")
+plt.show()
+
+# Inverse the FFT
+plt.plot(time, np.fft.ifft(signalF))
+plt.title("Inverse Fourier Transform")
 plt.show()
