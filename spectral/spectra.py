@@ -13,7 +13,7 @@ npnts = srate * 2 # 2 seconds of data
 time = np.arange(0, npnts-1)/srate
 
 # frequencies to be included
-frex = [12, 18, 30]
+frex = [0, 50, 100, 150]
 
 # signal dummy
 signal = np.zeros(len(time))
