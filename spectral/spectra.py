@@ -13,9 +13,8 @@ npnts = srate * 2 # 2 seconds of data
 time = np.arange(0, npnts-1)/srate
 
 # frequencies to be included
-frex = [0, 50, 100, 150]
+frex = [0, 50, 100, 150] #excl. first
 
-# signal dummy
 signal = np.zeros(len(time))
 
 # populate
@@ -25,8 +24,10 @@ for i in range(len(frex)):
 # add noise
 signal = signal + np.random.randn(len(signal))
 
+# take FFT
 signalF = np.fft.fft(signal)
-signalA = 2*np.abs(signalF)/npnts
+# extract amplitude
+signalA = np.abs(signalF)
 
 hz = np.linspace(0, srate/2, int(npnts/2)+1)
 hzA = np.zeros(len(hz))
