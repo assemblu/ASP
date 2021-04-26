@@ -1,0 +1,1 @@
+Better just run filters.ipynb instead of the rest as it's more efficient and easier to examine.
