@@ -24,7 +24,7 @@ signal = ampl + noise
 filteredSignal = np.zeros(n)
 
 # running mean
-k = 20
+k = 20 # kernel
 for i in range(k, n-k-1):
     filteredSignal[i] = np.mean(signal[i-k:i+k])
 
