@@ -5,7 +5,7 @@ While this directory does not aim at only audio, but general DSP.
 ### Timeline
 <b>Time Series</b><br>
 <ul>
-    <li>Mean-smooth</li>
+    <li>Mean-smooth <b>[in-progress]</b></li>
     <li>Gaussian-smooth</li>
     <li>Denoising EMG signals via TKEO</li>
     <li>Medial filter to remove spike noise</li>
