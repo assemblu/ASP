@@ -3,7 +3,7 @@ Following some books and making of my own curriculum of DSP.
 ## Scope
 While this directory does not aim at only audio, but general DSP.
 ### Timeline
-<b>Time Series</b><br>
+<b>Time Series [active]</b><br>
 <ul>
     <li>Mean-smooth <b>[in-progress]</b></li>
     <li>Gaussian-smooth</li>
