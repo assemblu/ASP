@@ -10,6 +10,9 @@ import sounddevice as sd
 t = np.arange(0, np.pi*2, 0.001534)
 y = signal.sawtooth(t)*65536/2
 
+t = np.linspace(0, 2 * np.pi, 4096)
+y = 2048 * signal.sawtooth(t) + 2048
+
 index = 0
 while index < len(y):
     y[index] = int(y[index])

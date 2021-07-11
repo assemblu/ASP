@@ -24,6 +24,9 @@ impres[501] = 1
 # apply filtering
 fimp = signal.lfilter(fkernB, fkernA, impres, axis=-1)
 
+frange = [90, 130]
+fkernB, fkernA = signal.butter(4, np.array(frange)/nyquist, btype='bandpass')
+fimp = signal.lfilter(fkernB, fkernA, fimp, axis=-1)
 
 # power spectrum
 fimpX = np.abs(fftpack.fft(fimp))**2
