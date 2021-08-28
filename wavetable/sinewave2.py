@@ -14,8 +14,8 @@ end_time = 1
 
 time = np.arange(start_time, end_time, 1/sample_rate)
 
-frequency = 10
-amplitude = 60000/2
+frequency = 1
+amplitude = 4000
 theta = 0
 
 x = np.linspace(0, 2 * np.pi * frequency, 4096)
