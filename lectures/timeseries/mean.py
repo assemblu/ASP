@@ -18,3 +18,11 @@ noise_amplitude = 5
 amplitude = np.interp(np.linspace(0, p, n), np.arange(0, p), np.random.rand(p)*30)
 noise = noise_amplitude * np.random.rand(n)
 signal = amplitude + noise
+
+# initialize the filtered signal as zeros (empty)
+filtered_signal = np.zeros(n)
+
+# running mean algorithm
+k = 20 # kernel buffer, defines how further and back we will navigate
+for i in range(k, n-k-1):
+    filtered_signal[i] = np.mean(signal[i-k:i+k])
