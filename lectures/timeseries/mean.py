@@ -14,3 +14,7 @@ p = 15
 # artifically added noise
 noise_amplitude = 5
 
+# sample signal generation
+amplitude = np.interp(np.linspace(0, p, n), np.arange(0, p), np.random.rand(p)*30)
+noise = noise_amplitude * np.random.rand(n)
+signal = amplitude + noise
