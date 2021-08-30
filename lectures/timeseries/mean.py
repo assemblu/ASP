@@ -2,6 +2,7 @@
 # Description: Mean smooth algorithm
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 sampling_rate = 1000 #Hz
 # 0 to 3 chop into 1/1000
@@ -26,3 +27,7 @@ filtered_signal = np.zeros(n)
 k = 20 # kernel buffer, defines how further and back we will navigate
 for i in range(k, n-k-1):
     filtered_signal[i] = np.mean(signal[i-k:i+k])
+
+plt.plot(time, signal, label='original')
+plt.plot(time, filtered_signal, label='filtered')
+plt.show()
