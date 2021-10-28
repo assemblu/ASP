@@ -8,7 +8,7 @@ import math
 
 import sounddevice as sd
 
-t = np.arange(0, np.pi*2, 0.001534/1)
+t = np.arange(0, np.pi*2, 0.001534/0.0623)
 y = np.sin(t)*65536/2
 
 index = 0
