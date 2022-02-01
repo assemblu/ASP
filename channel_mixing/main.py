@@ -22,5 +22,11 @@ exit
 
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.io import wavfile
+
+
+fs_channel_1, data_channel_1 = wavfile.read('C:\dev\ASP\channel_mixing\samples\synth.wav')
+fs_channel_2, data_channel_2 = wavfile.read('C:\dev\ASP\channel_mixing\samples\piano.wav')
+
 
 
