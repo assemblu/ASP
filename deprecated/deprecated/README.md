@@ -1,2 +1,0 @@
-# ASP
-Audio Signal Processing
